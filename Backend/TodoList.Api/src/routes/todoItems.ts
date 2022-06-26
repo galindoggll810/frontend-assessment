@@ -106,7 +106,6 @@ todoItemRouter.post("/", async (req: Request, res: Response) => {
 todoItemRouter.put("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    console.log(id, req.body);
     const todoItem: BaseTodoItem = req.body;
 
     const existingTodoItem: TodoItem = await find(id);
